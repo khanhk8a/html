@@ -1,0 +1,20 @@
+{
+  "name": "text-to",
+  "version": "1.0.0",
+  "description": "aaaaaaa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^4.2.2",
+    "csv-parser": "^3.0.0",
+    "ffmpeg-static": "^5.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "papaparse": "^5.4.1",
+    "request": "^2.88.2"
+  }
+}
