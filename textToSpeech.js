@@ -3,7 +3,7 @@ const util = require('util');
 const textToSpeech = require('@google-cloud/text-to-speech');
 
 function createAudioWithTextToSpeech(textString, pathOutPut) {
-    
+
     // Tạo client mới với thông tin xác thực lấy từ biến môi trường GOOGLE_APPLICATION_CREDENTIALS
     const client = new textToSpeech.TextToSpeechClient();
 
@@ -25,12 +25,12 @@ function createAudioWithTextToSpeech(textString, pathOutPut) {
         const audioContent = response.audioContent;
 
         // Tạo file âm thanh từ nội dung trích xuất được
-        fs.writeFile(pathOutPut + ".mp3", audioContent, 'binary', (err) => {
+        fs.writeFile(pathOutPut + "/output.mp3", audioContent, 'binary', (err) => {
             if (err) {
                 console.error('Error:', err);
                 return;
             }
-            console.log('Audio content written to file: ' + pathOutPut + '.mp3');
+            console.log('Audio content written to file: ' + pathOutPut + '/output.mp3');
         });
     });
 }
